@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="custom-container">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <br>
+	<br>
+	<div class="segment" id="segment1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<h1 class="title-text underline-animation">Welcome to Detail Dynasty</h1>
+					<p class="lead my-3">
+						Do you need a car to be detailed thoroughly, but just don't have the time? Or perhaps, you don't want to spend an arm and a leg on expensive detailers?
+						Worry no more- we have what you need. 
+					</p>
+				</div>
+				
+				<div class="col-md-7">
+					<img class="side-title-img hide" src="https://static.wixstatic.com/media/3541f02a8d194926b02d8ed501e675bc.jpg/v1/fill/w_1736,h_1070,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Car%20Interior.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="segment row" id="segment2">
+	    <h1 class="section-heading col-md-12" style="text-align: center;">What we Detail</h1>
+		<h4 style="text-align: center;">We deliver straight to your home!</h4>
+		<br>
+		<div class="col-md-6">
+		    <div class="row" style="margin: 5px;">
+		        <div class="column col-md-12 scroll-effect">
+		            <div class="card mb-4">
+		                <div class="card-body">
+		                    <h3 class="card-title">Exterior Detailing</h3>
+		                    <p class="card-text">
+		                        We give only the highest quality exterior detailing so that you can "wow" your friends and family!
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="row" style="margin: 5px;">
+		        <div class="column col-md-12 scroll-effect">
+		            <div class="card mb-4">
+		                <div class="card-body">
+		                    <h3 class="card-title">Interior Detailing</h3>
+		                    <p class="card-text">
+		                        Is your car looking dirty? We can fix that, and more!
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="row" style="margin: 5px;">
+		        <div class="column col-md-12 scroll-effect">
+		            <div class="card mb-4">
+		                <div class="card-body">
+		                    <h3 class="card-title">Deluxe Detail Packages</h3>
+		                    <p class="card-text">
+		                        We can clean your car so well, you'll think you just bought it!
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+			<div class="row hide" style="margin: 5px;">
+		        <div class="column col-md-12 scroll-effect">
+		            <h4>Convinced? <a href="/login">Book now!</a></h4>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="col-md-6">
+		    <div class="row hide">
+		        <div class="col-md-6">
+		            <img class="scroll-effect img-fluid" src="https://c.pxhere.com/photos/40/35/photo-168537.jpg!d" alt="Image 1">
+		        </div>
+		        <div class="col-md-6">
+		            <img class="scroll-effect img-fluid" src="https://th.bing.com/th/id/R.2972ab0e003809de3a2ad572474fd8de?rik=9SQ4hbrknOzd3g&riu=http%3a%2f%2fwww.automoblog.net%2fwp-content%2fuploads%2f2012%2f03%2f05-lexus-lf-lc-concept.jpg&ehk=gqj96Xdi2wIP4hXbj3nYC7T8pBLqgieeeW29XXV9pd0%3d&risl=&pid=ImgRaw&r=0" alt="Image 2">
+		        </div>
+			</div>
+
+			<br>
+			
+			<div class="row hide">
+		        <div class="col-md-6">
+		            <img class="scroll-effect img-fluid" src="https://images.pexels.com/photos/4077265/pexels-photo-4077265.jpeg?cs=srgb&dl=red-hyundai-car-parked-near-snow-covered-ground-4077265.jpg&fm=jpg" alt="Image 3">
+		        </div>
+				<div class="col-md-6">
+		            <img class="scroll-effect img-fluid" src="https://mommysnippets.com/wp-content/uploads/2015/10/clean-car-768x576.jpg" alt="Image 3">
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="segment" id="segment3">
+	    <section class="backgroundmoreinformation">
+	        <div class="shapes">
+	            <!-- Car Icons -->
+	            <div class="shape hide shape-car car2"><i class="fa fa-car"></i></div>
+	            <div class="shape hide shape-car car1"><i class="fa fa-cog"></i></div>
+	            <div class="shape hide shape-car car3"><i class="fa fa-check-square"></i></div>
+	            <div class="shape hide shape-car car4"><i class="fa fa-usd"></i></div>
+	            <div class="shape hide shape-car car5"><i class="fa fa-car"></i></div>
+	            <!-- Other shapes -->
+	            <div class="shape shape1"></div>
+	            <div class="shape shape2"></div>
+	            <div class="shape shape3"></div>
+	            <div class="shape shape4"></div>
+	            <div class="shape shape5"></div>
+	            <div class="shape shape6"></div>
+	            <div class="shape shape7"></div>
+	            <div class="shape shape8"></div>
+	            <div class="shape shape9"></div>
+	        </div>
+	        <div class="join-now">
+	            <h2 class="join-now-text">What are you waiting for?</h2>
+	            <a class="btn btn-primary btn-lg" href="/login" role="button">Book Now!</a>
+	        </div>
+	    </section>
+	</div>
+
+	
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $(".scroll-effect").each(function() {
+                    var imagePos = $(this).offset().top;
+                    var topOfWindow = $(window).scrollTop();
+
+                    if (imagePos < topOfWindow + $(window).height() - 100) {
+                        $(this).addClass("visible");
+                    }
+                });
+            });
+        });
+		// When the page loads, add a class to trigger the animation
+		window.addEventListener('load', function() {
+			const title = document.querySelector('.underline-animation');
+			title.classList.add('animate-underline');
+		});
+
+    </script>
+{% endblock %}
+

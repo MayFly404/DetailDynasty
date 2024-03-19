@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<div class="container mt-5">
+    <h1>Admin Panel</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Booked By</th>
+                    <th>View Details</th> <!-- New column for viewing booking details -->
+                    <th>Remove Booking</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td>{{ booking.booked_by }}</td>
+                    <td>
+                        <a href="{{ url_for('booking_details', booking_id=booking.id) }}" class="btn btn-info">View Details</a>
+                    </td>
+                    <td>
+                        <form method="POST" action="/remove_booking/{{ booking.id }}">
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- User Management Section (Only visible to admins) -->
+{% if current_user.is_admin %}
+<div class="container mt-5">
+    <h2>User Management</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Is Admin</th>
+                    <th>Promote</th>
+                    <th>Demote</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.is_admin }}</td>
+                    <td>
+                        {% if not user.is_admin %}
+                        <form method="POST" action="/promote_to_admin/{{ user.id }}">
+                            <button type="submit" class="btn btn-success">Promote</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if user.is_admin %}
+                        <form method="POST" action="/demote_admin/{{ user.id }}">
+                            <button type="submit" class="btn btn-warning">Demote</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<div class="container mt-5">
+    <h1>Booking Details</h1>
+    <div>
+        <p><strong>Date:</strong> {{ booking.date }}</p>
+        <p><strong>Time:</strong> {{ booking.time }}</p>
+        <p><strong>Booked By:</strong> {{ booking.booked_by }}</p>
+        <p><strong>Full Name:</strong> {{ booking.first_name }}</p>
+        <p><strong>Phone Number or Email:</strong> {{ booking.last_name }}</p>
+        <p><strong>Address:</strong> {{ booking.address }}</p>
+        <!-- Add other fields here if needed -->
+    </div>
+</div>
+{% endblock %}

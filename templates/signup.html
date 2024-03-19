@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+  <div class="container" style="margin: 15px;">
+    <h2 class="mt-5">Sign Up</h2>
+    {% if error_message %}
+      <p class="text-danger">{{ error_message }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('signup') }}" class="mt-4">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required class="form-control">
+      </div>
+		<br>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+
+	  <br>
+	  <br>
+	  
+<div class="mt-4">
+  <p>Already have an account? <a href="{{ url_for('login') }}">Log In</a></p>
+</div>
+  </div>
+{% endblock %}

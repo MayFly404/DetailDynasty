@@ -1,0 +1,359 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	color:black;
+	overflow-x: hidden;
+}
+
+h5, h4, h3, h2, h1 {
+	overflow-y: hidden;
+}
+
+/* BASE.HTML footer*/
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+
+/* SCROLL EFFECT */
+.scroll-effect {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 600px; /* Adjust the value based on your desired width */
+}
+
+.scroll-effect h2 {
+  text-align: center;
+}
+
+.scroll-effect img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.scroll-effect.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.backgroundmoreinformation {
+  background-color: #774939
+}
+
+/* ABOUT.HTML */
+.about-container {
+ padding: 20px; /* Add padding to the container */
+}
+
+.large-text-about {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+/* HOME.HTML */
+
+/* Set the initial style of the underline animation */
+h1.underline-animation {
+	position: relative;
+}
+
+h1.underline-animation::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #007BFF; /* You can use the color of your choice */
+	transition: width 1.5s; /* Set the animation duration */
+}
+
+h1.underline-animation.animate-underline::after {
+	width: 90%; /* The underline will animate to full width */
+}
+
+/* SEGMENT CODE */
+.segment {
+	position: relative;
+	overflow: hidden;
+}
+
+#segment1 {
+	background-color: #fff;
+	margin-bottom: 40px;
+	padding: 60px 0;
+
+}
+
+#segment2 {
+	background-color: #e9e9e9;
+	align-content: left;
+	padding: 60px 0;
+}
+
+#segment3 {
+	background-color: #e9e9e9;
+	align-content: left;
+}
+
+/* HOME.HTML Title Cover */
+
+.title-text {
+	font-size: 80px;
+	overflow: hidden;
+	padding: 5px;
+}
+
+.side-title-img {
+	width: 60%;
+	position: absolute;
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+/* carousel */
+#segment2 img {
+	width: 250px;
+	height: 150px;
+	border-radius: 20px;
+}
+
+/* Geometry BG end segment */
+.backgroundmoreinformation {
+    position: relative;
+    background-color: #2d3436;
+    height: 100vh;
+    overflow: hidden;
+	overflow-y: hidden;
+}
+
+.shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+	overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+	overflow: hidden;
+    opacity: 0.5;
+    animation: moveShape infinite 12s ease-in-out;
+}
+
+.shape1 {
+    background-color: #dfe6e9;
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5%;
+}
+
+.shape2 {
+    background-color: #dfe6e9;
+	width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+}
+
+.shape3 {
+    background-color: #dfe6e9;
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 60%;
+    left: 50%;
+}
+
+.shape4 {
+    background-color: #dfe6e9;
+	width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 80%;
+    left: 70%;
+}
+
+.shape5 {
+    background-color: #dfe6e9;
+	width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 30%;
+    left: 80%;
+}
+
+.shape6 {
+    background-color: #dfe6e9;
+	width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 70%;
+    left: 90%;
+}
+
+.shape7 {
+    background-color: #dfe6e9;
+	width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top: 10%;
+    left: 40%;
+}
+
+.shape8 {
+    width: 50px;
+	background-color: #dfe6e9;
+    height: 50px;
+    border-radius: 50%;
+    top: 90%;
+    left: 60%;
+}
+
+.shape9 {
+    width: 70px;
+	background-color: #dfe6e9;
+    height: 70px;
+    border-radius: 50%;
+    top: 40%;
+    left: 30%;
+}
+
+.shape-car {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateCar infinite 11s ease-in-out; /* Adjust rotation animation duration as needed */
+}
+
+.fa {
+	color:white;
+}
+
+.car1 {
+    top: 30%;
+    left: 20%;
+}
+
+.car2 {
+    top: 70%;
+    left: 80%;
+}
+
+.car3 {
+    top: 15%;
+    left: 70%;
+}
+
+.car4 {
+    top: 80%;
+    left: 40%;
+}
+
+.car5 {
+    top: 60%;
+    left: 25%;
+}
+
+.join-now {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.join-now-text {
+    font-size: 30px;
+    margin-bottom: 20px;
+	color: white;
+}
+
+/* Animation Geometry BG */
+
+/* Animation to rotate the car icon */
+@keyframes rotateCar {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+	100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+
+@keyframes moveShape {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(100px) translateY(100px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+
+
+/* END OF HOME.HTML */
+/* START OF SERVICES.HTML */
+
+.card img {
+	padding: 5px;
+}
+
+
+/* END OF SERVICES.HTML */
+
+
+
+
+/* CSS RULES */
+@media (max-width: 767px) {
+  .hide {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .hideBig {
+    display: none;
+  }
+}
